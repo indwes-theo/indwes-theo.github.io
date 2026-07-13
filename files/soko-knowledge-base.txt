@@ -1,0 +1,62 @@
+# SokoDRC Customer Policies (Prototype Knowledge Base)
+
+About SokoDRC: SokoDRC is a prototype online marketplace that connects local retailers in the Democratic Republic of Congo with customers in cities and rural areas. This document contains illustrative prototype policies for an academic project, not a live business. Example codes and numbers are placeholders.
+
+## Delivery zones and timelines
+- Lubumbashi (same city): 1 to 2 business days.
+- Kinshasa: 2 to 4 business days.
+- Provincial capitals (Kolwezi, Likasi, Goma, Bukavu, Mbuji-Mayi, Kisangani, Matadi): 3 to 7 business days.
+- Rural areas: weekly delivery to partner pickup points (local shops). The customer receives an SMS when the package arrives at the pickup point, and it is held for 7 days.
+- Couriers call the customer before delivery. Customers may give a landmark (church, school, market) instead of a street address.
+- Delivery fees are shown at checkout and depend on the zone.
+
+## Payment methods
+SokoDRC never asks for your PIN. You enter your PIN only on your own phone, in your mobile money menu. Any person asking for your PIN is not from SokoDRC.
+
+Before you confirm any payment, check two things on your screen: the amount, and the merchant name or code (SOKO01). If either looks wrong, cancel and start again.
+
+- Orange Money: dial the Orange Money menu (example prototype code *144#), choose "Pay merchant," enter merchant code SOKO01, enter the amount, confirm on your phone.
+- M-Pesa (Vodacom): open the M-Pesa menu (example prototype code *1122#), choose "Payments," merchant SOKO01, amount, confirm on your phone.
+- Airtel Money: open the Airtel Money menu (example prototype code *501#), choose "Make payment," merchant SOKO01, amount, confirm on your phone.
+- Afrimoney (Africell): open the Afrimoney menu (example prototype code *555#), choose "Pay merchant," merchant SOKO01, amount, confirm on your phone.
+- Cash on delivery: available in Lubumbashi and Kinshasa only. Exact change is appreciated.
+- Not enough balance? You can deposit cash with any mobile money agent near you, then pay. Your order is held while you top up.
+- Small fees may apply to mobile money payments. These fees are set by your mobile operator, not by SokoDRC. The total, including any fees, is shown before you confirm.
+- Prices are shown in Congolese francs (FC), and in US dollars (USD) where applicable. You pay in the currency shown at checkout.
+
+## Payment problems and troubleshooting
+- Payment is confirmed instantly. Once you confirm on your phone, your order is processed right away and you receive two messages: a payment confirmation SMS from your mobile operator, and an order confirmation with your order code from SokoDRC.
+- Payment failed? First check your balance and your network signal, then try again. If the problem continues, try another payment method or contact support.
+- Money deducted but no order confirmation? Do not pay again. Contact support with the transaction number from your operator's SMS. We will verify the payment and confirm your order or arrange a correction.
+- Charged twice? Contact support with both transaction numbers. We will verify and refund the duplicate to your mobile money account.
+- Entered something wrong? If the merchant code or amount looked wrong before confirming, cancel and start again. If you already confirmed a wrong payment, contact support with the transaction number.
+
+## Fraud and account safety
+- SokoDRC staff never ask for your PIN, your SIM card, or codes you receive by SMS. Anyone who does is not from SokoDRC, even if they know your name or order details. End the conversation and report it to support.
+- Beware of calls or messages offering prizes or jobs in exchange for confirming a payment. SokoDRC never runs promotions that require a payment to claim.
+- Only pay through your own mobile money menu to merchant code SOKO01. Never hand your phone to someone else to "help" complete a payment.
+
+## Ordering without internet (USSD)
+- Dial the SokoDRC USSD menu (example prototype code *243*765#) from any phone, no internet needed.
+- Browse categories in the menu, choose a product, choose delivery or pickup point, confirm.
+- You receive your order code by SMS.
+
+## Order codes and tracking stages
+- Order codes look like SOKO-XXXXX and are sent by SMS after purchase.
+- Stages: Confirmed, With retailer, In transit, At pickup point or Out for delivery, Delivered.
+- Status updates are sent by SMS at each stage. (In this prototype, live status lookup is not available; the assistant explains the stages and offers human follow-up.)
+
+## Returns and refunds
+- Returns are accepted within 7 days of delivery for unused items in their original packaging.
+- Refunds go to the customer's mobile money account within 3 to 5 business days after the returned item is inspected.
+- Delivery fees are not refunded unless the error was ours (wrong or damaged item).
+- To start a return: contact support with your order code and the reason.
+
+## Human support
+- WhatsApp: +243 81 000 XXXX (prototype placeholder), Monday to Saturday, 8:00 to 18:00 (Lubumbashi time).
+- Support is available in French and English.
+- Support staff never ask for PINs or passwords.
+- When contacting support about a payment, have your order code (SOKO-XXXXX) and the transaction number from your operator's SMS ready. It makes resolution much faster.
+
+## Privacy
+- This prototype stores no real customer data. A real deployment would follow DRC data protection requirements and mobile money operator rules.
