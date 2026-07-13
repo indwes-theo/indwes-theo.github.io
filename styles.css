@@ -1,0 +1,115 @@
+/* Theodore Yumba · Portfolio · hand-built, no framework */
+:root {
+  --ink: #1b2430;
+  --ink-soft: #46525f;
+  --paper: #faf7f2;
+  --card: #ffffff;
+  --copper: #b4622d;      /* Katanga copper */
+  --copper-deep: #8f4a1e;
+  --line: #e6ded2;
+  --ok: #2e6e4e;
+  --max: 980px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+}
+h1, h2, h3 { font-family: "Fraunces", Georgia, serif; line-height: 1.15; color: var(--ink); }
+h1 { font-size: clamp(2.1rem, 5vw, 3.3rem); margin: 0 0 .4em; font-weight: 600; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: 2.2em 0 .5em; font-weight: 600; }
+h3 { font-size: 1.15rem; margin: 1.6em 0 .4em; }
+p  { margin: 0 0 1em; color: var(--ink-soft); }
+strong { color: var(--ink); }
+a { color: var(--copper-deep); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--copper); }
+img { max-width: 100%; height: auto; display: block; border-radius: 10px; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+
+/* nav */
+nav {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(250, 247, 242, .92); backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+nav .wrap { display: flex; align-items: center; gap: 22px; padding: 14px 22px; }
+nav .brand { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 1.05rem; color: var(--ink); text-decoration: none; margin-right: auto; }
+nav a.link { font-size: .92rem; color: var(--ink-soft); text-decoration: none; }
+nav a.link:hover { color: var(--copper-deep); }
+
+/* hero */
+header.hero { padding: 84px 0 56px; border-bottom: 1px solid var(--line); }
+.kicker {
+  display: inline-block; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--copper-deep); font-weight: 600; margin-bottom: 14px;
+}
+.hero p.lede { font-size: 1.18rem; max-width: 46em; }
+.hero .meta { font-size: .92rem; color: var(--ink-soft); margin-top: 18px; }
+.btns { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-block; padding: 11px 20px; border-radius: 8px; font-size: .95rem;
+  text-decoration: none; font-weight: 600; border: 1.5px solid var(--copper-deep);
+}
+.btn.primary { background: var(--copper-deep); color: #fff; }
+.btn.primary:hover { background: var(--copper); border-color: var(--copper); color: #fff; }
+.btn.ghost { color: var(--copper-deep); background: transparent; }
+.btn.ghost:hover { background: #f3e9dd; }
+
+/* sections */
+section { padding: 8px 0 20px; }
+.rule { border: 0; border-top: 1px solid var(--line); margin: 40px 0 0; }
+
+/* value pillars */
+.pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 18px; }
+.pillar {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px 20px 14px;
+}
+.pillar h3 { margin: 0 0 .4em; font-size: 1.02rem; }
+.pillar p { font-size: .95rem; margin-bottom: .3em; }
+
+/* artifact cards */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 18px; margin-top: 18px; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+  display: flex; flex-direction: column; transition: transform .15s ease, box-shadow .15s ease;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(27, 36, 48, .10); }
+.card img { border-radius: 0; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
+.card .pad { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.card .tag { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--copper-deep); font-weight: 600; }
+.card h3 { margin: 0; font-size: 1.12rem; }
+.card p { font-size: .93rem; margin: 0; flex: 1; }
+.card a.more { font-size: .93rem; font-weight: 600; text-decoration: none; margin-top: 10px; }
+.card.soon { opacity: .62; background: transparent; border-style: dashed; }
+.card.soon .pad { justify-content: center; text-align: center; min-height: 130px; }
+
+/* artifact page */
+.breadcrumb { font-size: .9rem; margin: 26px 0 0; }
+.artifact-meta { font-size: .92rem; color: var(--ink-soft); margin-bottom: 4px; }
+figure { margin: 26px 0; }
+figcaption { font-size: .86rem; color: var(--ink-soft); margin-top: 8px; font-style: italic; }
+figure img { border: 1px solid var(--line); }
+.callout {
+  background: #f3ece1; border: 1px solid var(--line); border-left: 4px solid var(--copper);
+  border-radius: 10px; padding: 18px 20px; margin: 26px 0;
+}
+.callout h3 { margin: 0 0 .4em; }
+.callout p, .callout li { font-size: .95rem; }
+ul { color: var(--ink-soft); padding-left: 1.2em; }
+li { margin-bottom: .45em; }
+.refs { font-size: .95rem; }
+
+/* footer */
+footer { margin-top: 60px; border-top: 1px solid var(--line); padding: 34px 0 44px; }
+footer p { font-size: .9rem; margin-bottom: .35em; }
+
+@media (max-width: 640px) {
+  nav .wrap { gap: 14px; }
+  header.hero { padding: 56px 0 40px; }
+}

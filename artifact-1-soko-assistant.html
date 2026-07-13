@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artifact 1: Soko Assistant · Theodore Yumba</title>
+  <meta name="description" content="Soko Assistant: a bilingual AI customer-support prototype for the DR Congo, designed, built, tested and deployed by Theodore Yumba." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html">Theodore Yumba</a>
+    <a class="link" href="index.html#about">About</a>
+    <a class="link" href="index.html#value">Value</a>
+    <a class="link" href="index.html#artifacts">Artifacts</a>
+    <a class="link" href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <p class="breadcrumb"><a href="index.html#artifacts">← All artifacts</a></p>
+
+  <header style="padding: 18px 0 6px;">
+    <span class="kicker">Artifact 1 · AI Lab · Workshop 1</span>
+    <h1>Soko Assistant: A Bilingual AI Customer-Support Prototype for the DR Congo</h1>
+    <p class="artifact-meta">Individual project · July 2026 · AIML-500 Machine Learning Fundamentals, Indiana Wesleyan University</p>
+    <div class="btns">
+      <a class="btn primary" href="https://www.chatbase.co/MJqqu9by9r9kELqSXiOSh/help" target="_blank" rel="noopener">Try the live agent</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Introduction</h2>
+    <p>Soko Assistant is a working AI customer-support agent I designed, built, tested and deployed in July 2026. It extends an e-commerce concept I developed in earlier academic work: an online marketplace for the Democratic Republic of Congo, where many customers shop on inexpensive phones, pay with mobile money, and cannot take reliable internet for granted.</p>
+    <p>The assistant answers order, payment and delivery questions in French and English, greets customers in the Katanga Swahili actually spoken in Lubumbashi, and refuses to do the things a trustworthy support channel must never do: invent an order status, accept a mobile-money PIN, or improvise policy. It is an academic prototype, and it says so honestly when a question needs a live system it does not have.</p>
+    <figure>
+      <img src="assets/01-soko-live-agent-page.jpg" alt="The deployed Soko Assistant agent page, greeting in Katanga Swahili, French and English with task quick replies" />
+      <figcaption>The deployed agent page: Katanga Swahili greeting, French and English support, task quick replies.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Artifact Description</h2>
+
+    <h3>Objective</h3>
+    <p>Give customers of a DRC e-commerce platform a low-bandwidth, bilingual way to get accurate answers about orders, mobile-money payment and delivery, without waiting for scarce human agents, and prove the concept end to end: design, guardrails, deployment and adversarial testing.</p>
+
+    <h3>Process</h3>
+    <p>I followed a design thinking sequence from empathy to test:</p>
+    <ul>
+      <li><strong>Empathy:</strong> personas grounded in people I know from Lubumbashi, from smartphone users worried about payment fraud to feature-phone users who order over USSD menus and pick up parcels at partner shops.</li>
+      <li><strong>Define:</strong> a one-sentence problem statement and an honest feasibility scope. A prototype has no live order database, so the assistant must say so rather than pretend.</li>
+      <li><strong>Ideate:</strong> compared a static FAQ, a human WhatsApp team, a USSD-only menu, and an AI chatbot with human escalation, and chose the chatbot as the scalable complement to the others.</li>
+      <li><strong>Prototype:</strong> wrote the system instructions and a policy knowledge file covering delivery zones, mobile-money payment steps for four operators, returns, fraud and account-safety warnings, and dual FC/USD pricing, then deployed the agent publicly.</li>
+      <li><strong>Test:</strong> ran ten adversarial scenarios against the live public page, including prompt injection, PIN phishing, an out-of-policy refund request, an off-topic political question, and an angry customer writing in French. Nine passed on the first run. The one failure was diagnosed, fixed by hardening the instructions, and retested to a clean pass.</li>
+    </ul>
+    <p>The design itself went through documented revisions: the greeting evolved from a generic bilingual welcome into a trilingual opener anchored in Katanga Swahili after I corrected an AI collaborator&rsquo;s confident but wrong suggestion, and live testing led to an output-discipline rule plus pre-written bilingual support-hours strings so the model never translates critical details on the fly.</p>
+
+    <figure>
+      <img src="assets/02-soko-french-order-tracking-test.jpg" alt="Live test in French: the assistant is honest about prototype limits, lists delivery stages, and asks for the order code" />
+      <figcaption>First live test in French: honest about prototype limits, accurate on delivery stages, asks for the order code.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="assets/03-greeting-design-iterations.jpg" alt="Three greeting versions at different formality levels with a recommendation for low-literacy users" />
+      <figcaption>Design iteration: three formality levels for the greeting, with a reasoned recommendation for low-literacy users.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="assets/04-katanga-swahili-correction.jpg" alt="The design correction replacing Hujambo with Jambo, the everyday Katanga Swahili greeting" />
+      <figcaption>Design correction during the build: replacing the AI&rsquo;s confident &ldquo;Hujambo&rdquo; with &ldquo;Jambo,&rdquo; the everyday Katanga Swahili greeting.</figcaption>
+    </figure>
+
+    <h3>Tools and Technologies Used</h3>
+    <ul>
+      <li><strong>Chatbase</strong> as the agent platform (GPT-5.4 Mini, retrieval-augmented generation over an uploaded policy document), with instruction design and prompt engineering as the core build skills.</li>
+      <li><strong>Documented AI collaboration:</strong> Claude (Anthropic) as a design collaborator for drafting instructions and test scenarios; ChatGPT (OpenAI), Le Chat (Mistral AI) and DeepSeek for comparative prompt research that fed the knowledge file; STORM (Stanford) for domain research on mobile money adoption in the DRC. Every design decision, correction and test result was mine to make and defend.</li>
+    </ul>
+  </section>
+
+  <div class="callout">
+    <h3>Test it yourself</h3>
+    <p>The agent is publicly deployed. Three probes worth trying:</p>
+    <ul>
+      <li>Ask for the status of order <strong>SOKO-12345</strong> and watch it decline to invent one.</li>
+      <li>Offer it your &ldquo;PIN for verification&rdquo; and watch it refuse and warn you.</li>
+      <li>Start in English, then switch to French mid-conversation.</li>
+    </ul>
+    <p><a href="https://www.chatbase.co/MJqqu9by9r9kELqSXiOSh/help" target="_blank" rel="noopener"><strong>Open Soko Assistant →</strong></a></p>
+  </div>
+
+  <section>
+    <h2>Value Proposition</h2>
+    <h3>Unique Value</h3>
+    <p>This artifact shows I can take an AI product from idea to deployed, tested reality, not just use AI tools. The details that matter to me are the unglamorous ones: hard rules that stop the assistant from inventing order statuses or accepting a mobile-money PIN, a greeting in the Swahili actually spoken in Lubumbashi rather than the textbook variant, support-hours strings pre-written in both languages so the model never translates on the fly, and a test plan designed to make the bot fail before a customer could.</p>
+    <h3>Relevance</h3>
+    <p>It is a direct demonstration of my personal value proposition: AI built for environments where connectivity, literacy and trust cannot be assumed. For a hiring manager or collaborator, it is testable evidence rather than a claim, since the agent is publicly deployed and its guardrails can be probed by anyone with the link.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <p class="refs">
+      Soko Assistant, live agent: <a href="https://www.chatbase.co/MJqqu9by9r9kELqSXiOSh/help" target="_blank" rel="noopener">chatbase.co/MJqqu9by9r9kELqSXiOSh/help</a><br />
+      Platform: <a href="https://www.chatbase.co" target="_blank" rel="noopener">Chatbase</a> · Domain research: <a href="https://storm.genie.stanford.edu" target="_blank" rel="noopener">STORM, Stanford Open Virtual Assistant Lab</a><br />
+      Prototype policies and full design documentation available on request.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="index.html#artifacts">← Back to all artifacts</a></p>
+    <p>© 2026 Theodore Yumba. Designed and built by me, with documented AI collaboration and every decision my own.</p>
+  </div>
+</footer>
+
+</body>
+</html>
