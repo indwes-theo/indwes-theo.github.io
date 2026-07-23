@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artifact 2: Machine Learning or Deep Learning · Theodore Yumba</title>
+  <meta name="description" content="A decision framework for choosing between classical machine learning and deep learning, proven on two production cases: telecom churn prediction and Google's switch to neural machine translation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html">Theodore Yumba</a>
+    <a class="link" href="index.html#about">About</a>
+    <a class="link" href="index.html#value">Value</a>
+    <a class="link" href="index.html#artifacts">Artifacts</a>
+    <a class="link" href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <p class="breadcrumb"><a href="index.html#artifacts">← All artifacts</a></p>
+
+  <header style="padding: 18px 0 6px;">
+    <span class="kicker">Artifact 2 · Case Study · Workshop 2</span>
+    <h1>Machine Learning or Deep Learning: Matching the Method to the Problem</h1>
+    <p class="artifact-meta">Individual analysis · July 2026 · AIML-500 Machine Learning Fundamentals, Indiana Wesleyan University</p>
+    <div class="btns">
+      <a class="btn primary" href="files/ml-vs-dl-decision-report.pdf" target="_blank" rel="noopener">Read the full report (PDF)</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Introduction</h2>
+    <p>Every applied AI project starts with an unglamorous decision that determines its budget, its timeline and its odds of working: does this problem need classical machine learning or deep learning? The expensive failure mode in industry is answering with prestige instead of analysis, reaching for a neural network because it sounds advanced, or settling for a simple model where only representation learning can cope.</p>
+    <p>This artifact is a written analysis that answers the question with evidence. It takes two problems from opposite ends of the spectrum, customer churn prediction and machine translation, pairs each with a documented production deployment, and argues the choice in both directions: why the right method fits, and why the other one fails there. The result is a three-question framework I now apply before proposing any model.</p>
+    <figure>
+      <img src="assets/05-ml-vs-dl-framework.jpg" alt="Two panels contrasting classical machine learning on structured tables with deep learning on raw sequences, over the three deciding questions" />
+      <figcaption>The short version: data shape, scale, and the need for explanation decide the method. The report argues each case with production evidence.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Artifact Description</h2>
+
+    <h3>Objective</h3>
+    <p>Build a defensible framework for choosing between classical machine learning and deep learning, and prove it on real deployments rather than in the abstract, so the reasoning survives contact with a skeptical reviewer, a budget owner, or a regulator asking why a customer was flagged.</p>
+
+    <h3>Process</h3>
+    <ul>
+      <li><strong>Selection:</strong> two examples chosen deliberately from opposite ends of the spectrum: churn prediction, where the data is a structured business table, and machine translation, where the data is raw language.</li>
+      <li><strong>Evidence:</strong> each example anchored to a documented real-world application: a peer-reviewed kernel support vector machine churn model for a telecom company (PLOS ONE), and Google&rsquo;s 2016 switch from a decade of phrase-based translation to its Neural Machine Translation system, which cut errors by 55% to 85% and took over all Chinese-to-English production traffic, about 18 million translations per day.</li>
+      <li><strong>Both directions:</strong> for each case the report explains why the chosen approach fits and why the opposite approach is unsuitable there, because one-directional arguments are advocacy, not analysis.</li>
+      <li><strong>Scholarly grounding:</strong> the claim that classical models still beat neural networks on typical structured tables is backed by benchmark research from NeurIPS, not by intuition.</li>
+      <li><strong>Verification:</strong> every citation was checked against the live original source before publication, a discipline carried over from Artifact 1, where the same habit caught an AI research tool importing a neighboring country&rsquo;s market data.</li>
+    </ul>
+
+    <h3>Tools and Technologies Used</h3>
+    <ul>
+      <li><strong>Primary-source research and verification:</strong> PLOS ONE, NeurIPS proceedings, and Google Research publications, each confirmed against the live source.</li>
+      <li><strong>Academic writing:</strong> APA 7 report structure, argumentation, and citation practice.</li>
+      <li><strong>Documented AI collaboration:</strong> Claude (Anthropic) assisted with locating sources, structuring the report, and building this page. The example selection, the suitability arguments, the corrections, and the final judgment are mine.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>The Decision Framework</h2>
+    <p>The portfolio version of this artifact is the tool itself: three questions that settle the choice before any code is written.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <h3>1 · What shape is the data?</h3>
+        <p>A curated table whose columns already mean something favors classical models. Raw signal, text, pixels, audio, favors deep learning, because nobody can hand-write the features that matter.</p>
+      </div>
+      <div class="pillar">
+        <h3>2 · How much data and compute?</h3>
+        <p>Moderate, imbalanced datasets reward careful feature work and simple models. Representation learning pays off only where data and hardware are effectively unlimited.</p>
+      </div>
+      <div class="pillar">
+        <h3>3 · Who needs an explanation?</h3>
+        <p>If a person must act on the reason, a retention offer, an audit, a customer asking why, the model has to show its work. If output is judged purely on quality, opacity costs less.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="callout">
+    <h3>How I use it</h3>
+    <p>Before proposing any model, I answer the three questions in writing. Churn answers <em>table, moderate, explanation owed</em>, so classical machine learning wins. Translation answers <em>raw sequence, effectively unlimited, quality only</em>, so deep learning wins. When two of three point to the boring tool, the boring tool wins, and the budget says thank you.</p>
+  </div>
+
+  <section id="files">
+    <h2>Artifact Files</h2>
+    <p>The complete analysis, with every claim cited and every source verified.</p>
+    <div class="filelist">
+      <a class="file" href="files/ml-vs-dl-decision-report.pdf" target="_blank" rel="noopener">
+        <span class="ext">PDF</span>
+        <span class="fmeta">
+          <strong>Machine Learning or Deep Learning: The Full Report</strong>
+          <em>Seven pages, APA 7. Two production cases argued in both directions: kernel-SVM churn prediction (PLOS ONE) and Google&rsquo;s neural machine translation switch, with NeurIPS benchmark evidence behind the framework.</em>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Value Proposition</h2>
+    <h3>Unique Value</h3>
+    <p>Artifact 1 shows I can take an AI product from idea to deployed reality. This artifact shows the judgment that comes first: deciding what deserves to be built, with which method, and being able to defend the decision in both directions. The rarest sentence in applied AI is <strong>&ldquo;deep learning is the wrong tool here, and here is the evidence,&rdquo;</strong> and this analysis practices saying it where it is true.</p>
+    <h3>Relevance</h3>
+    <p>Teams building AI products in fintech and e-commerce live in churn-shaped data: structured tables, moderate scale, decisions that owe customers an explanation. This framework is directly usable in that world, and the full report demonstrates the research discipline behind it, primary sources, peer-reviewed evidence, and verification against the original before anything gets cited.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <p class="refs">
+      Full report: <a href="files/ml-vs-dl-decision-report.pdf" target="_blank" rel="noopener">Machine Learning or Deep Learning (PDF, 7 pp.)</a><br />
+      Churn case: Dao, V. T. S. (2022), <a href="https://doi.org/10.1371/journal.pone.0267935" target="_blank" rel="noopener">Churn prediction in telecommunication industry using kernel support vector machines</a>, PLOS ONE<br />
+      Tabular benchmark: Grinsztajn, Oyallon &amp; Varoquaux (2022), <a href="https://neurips.cc/virtual/2022/poster/55627" target="_blank" rel="noopener">Why do tree-based models still outperform deep learning on typical tabular data?</a>, NeurIPS<br />
+      Translation case: Le &amp; Schuster (2016), <a href="https://research.google/blog/a-neural-network-for-machine-translation-at-production-scale/" target="_blank" rel="noopener">A neural network for machine translation, at production scale</a>, Google Research
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="index.html#artifacts">← Back to all artifacts</a></p>
+    <p>© 2026 Theodore Yumba. Designed and built by me, with documented AI collaboration and every decision my own.</p>
+  </div>
+</footer>
+
+</body>
+</html>
